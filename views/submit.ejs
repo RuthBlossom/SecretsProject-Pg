@@ -1,0 +1,31 @@
+<!-- Including the header partial -->
+<%- include('partials/header') %>
+
+<!-- Start of container -->
+<div class="container">
+  <!-- Start of jumbotron section -->
+  <div class="jumbotron centered">
+    <!-- Key icon -->
+    <i class="fas fa-key fa-6x"></i>
+    <!-- Main heading -->
+    <h1 class="display-3">Secrets</h1>
+    <!-- Secret text -->
+    <p class="secret-text">Don't keep your secrets, share them anonymously!</p>
+
+    <!-- Form for submitting secrets -->
+    <form action="/submit" method="POST">
+      <!-- Input field for the secret -->
+      <div class="form-group">
+        <input type="text" class="form-control text-center" name="secret" placeholder="What's your secret?">
+      </div>
+      <!-- Button to submit the secret -->
+      <button type="submit" class="btn btn-dark">Submit</button>
+    </form>
+
+  </div>
+</div>
+<!-- End of container -->
+
+<!-- Including the footer partial -->
+<%- include('partials/footer') %>
+

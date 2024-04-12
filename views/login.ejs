@@ -1,0 +1,55 @@
+<!-- Including the header partial -->
+<%- include('partials/header') %>
+
+<!-- Start of container with top margin -->
+<div class="container mt-5">
+  <!-- Main heading for the login page -->
+  <h1>Login</h1>
+
+  <!-- Row for layout -->
+  <div class="row">
+    <!-- Left column for login form -->
+    <div class="col-sm-8">
+      <div class="card">
+        <div class="card-body">
+
+          <!-- Form for user login -->
+          <form action="/login" method="POST">
+            <!-- Email input field -->
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" class="form-control" name="username">
+            </div>
+            <!-- Password input field -->
+            <div class="form-group">
+              <label for="password">Password</label>
+              <input type="password" class="form-control" name="password">
+            </div>
+            <!-- Button to submit the login form -->
+            <button type="submit" class="btn btn-dark">Login</button>
+          </form>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Right column for alternative login method -->
+    <div class="col-sm-4">
+      <div class="card">
+        <div class="card-body">
+          <!-- Button for signing in with Google -->
+          <a class="btn btn-block" href="/auth/google" role="button">
+            <!-- Google icon -->
+            <i class="fab fa-google"></i>
+            Sign In with Google
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+<!-- End of container -->
+
+<!-- Including the footer partial -->
+<%- include('partials/footer') %>
